@@ -24,4 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
     <button data-id='${product.id}'>Add to cart</button>`;
     productList.appendChild(productDiv);
   });
+
+  productList.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+      const productID = parseInt(e.target.getAttribute("data-id"));
+      const product = proudcts.find((p) => p.id === productID);
+    }
+  });
 });
