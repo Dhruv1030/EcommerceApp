@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     productDiv.innerHTML = `
     <span>
     ${product.name} - $${product.price.toFixed(2)}
-    </span>`;
+    </span>
+    <button data-id='${product.id}'>Add to cart</button>`;
+    productList.appendChild(productDiv);
   });
 });
