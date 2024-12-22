@@ -29,6 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.tagName === "BUTTON") {
       const productID = parseInt(e.target.getAttribute("data-id"));
       const product = proudcts.find((p) => p.id === productID);
+      addToCart(product);
     }
   });
+
+  function addToCart(product) {
+    cart.push(product);
+  }
 });
